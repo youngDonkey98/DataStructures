@@ -54,6 +54,14 @@ public class Array<E> {
     }
 
     /**
+     * 获取第一个元素
+     * @return
+     */
+    public E getFirst() {
+        return get(0);
+    }
+
+    /**
      * 数组是否为空
      */
     public boolean isEmpty(){
