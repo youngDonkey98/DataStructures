@@ -13,6 +13,7 @@
         <module>SparseArray</module>
         <module>Stack</module>
         <module>Leetcode</module>
+        <module>Queue</module>
     </modules>
 
 
