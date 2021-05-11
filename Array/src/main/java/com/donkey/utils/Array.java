@@ -62,6 +62,14 @@ public class Array<E> {
     }
 
     /**
+     * 获取最后第一个元素
+     * @return
+     */
+    public E getLast() {
+        return get(size - 1);
+    }
+
+    /**
      * 数组是否为空
      */
     public boolean isEmpty(){
