@@ -11,13 +11,18 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayQueue<Integer> queue = new ArrayQueue<>();
-        for (int i = 1; i < 10; i++) {
-            queue.enqueue(i);
-            System.out.println(queue);
+        LoopQueue<Integer> loopQueue = new LoopQueue<>();
+        for (int i = 0; i < 10; i++) {
+            // queue.enqueue(i);
+            loopQueue.enqueue(i);
+            // System.out.println(queue);
+            System.out.println(loopQueue);
 
-            if (i % 4 == 0) {
-                queue.dequeue();
-                System.out.println(queue);
+            if (i % 3 == 2) {
+                loopQueue.dequeue();
+                // queue.dequeue();
+                System.out.println(loopQueue);
+                // System.out.println(queue);
             }
         }
     }
