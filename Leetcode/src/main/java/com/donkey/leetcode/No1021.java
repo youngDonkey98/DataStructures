@@ -1,6 +1,7 @@
 package com.donkey.leetcode;
 
 import java.util.LinkedList;
+import java.util.stream.Collectors;
 
 /**
  * @Author zwx
@@ -11,8 +12,8 @@ import java.util.LinkedList;
  * 期望值：
  *  (()()) (())  ---> ()()()
  *  (()()) (()) ((()))  ---> ()() () (())
- *  执行用时：300 ms
- *  内存消耗：38.6 MB
+ *  执行用时：300 ms    Stream 15ms
+ *  内存消耗：38.6 MB          38.6 MB
  */
 public class No1021 {
 
@@ -37,13 +38,15 @@ public class No1021 {
             }
         }
 
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i) != '0') {
-                sb.append(list.get(i));
-            }
-        }
-        String s = new String(sb);
+//        StringBuffer sb = new StringBuffer();
+//        for (int i = 0; i < list.size(); i++) {
+//            if (list.get(i) != '0') {
+//                sb.append(list.get(i));
+//            }
+//        }
+//        String s = new String(sb);
+
+        String s = list.stream().filter(p -> p != '0').map(item -> item.toString()).collect(Collectors.joining());
         return s;
     }
 
