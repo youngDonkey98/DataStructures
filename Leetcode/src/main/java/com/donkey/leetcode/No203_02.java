@@ -14,13 +14,25 @@ public class No203_02 {
         }
 
         // 删除掉 链表中 包含val的节点
-        ListNode res = removeElements(head.next, val);
-        // 头节点需要删除
-        if (head.val == val) {
-            return res;
-        } else {
-            head.next = res;
-            return head;
-        }
+//        ListNode res = removeElements(head.next, val);
+//        // 头节点需要删除
+//        if (head.val == val) {
+//            return res;
+//        } else {
+//            head.next = res;
+//            return head;
+//        }
+
+        //   等同于
+        head.next = removeElements(head.next, val);
+//        if (head.val == val) {
+//            return head.next;
+//        } else {
+//            return head;
+//        }
+
+        //   等同于
+        return head.val == val ? head.next : head;
+
     }
 }
