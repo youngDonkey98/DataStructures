@@ -1,4 +1,4 @@
-package com.donkey.leetcode.utils;
+package com.donkey.leetcode;
 
 /**
  * @Author zwx
