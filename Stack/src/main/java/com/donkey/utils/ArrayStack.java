@@ -32,7 +32,7 @@ public class ArrayStack<E> implements Stack<E> {
     }
 
     @Override
-    public boolean isEnpty() {
+    public boolean isEmpty() {
         return array.isEmpty();
     }
 

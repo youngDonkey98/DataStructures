@@ -5,7 +5,7 @@ public interface Stack<E> {
 
     int getSize();
 
-    boolean isEnpty();
+    boolean isEmpty();
 
     // 向队列中添加元素
     void push(E e);
