@@ -55,16 +55,16 @@ public class BST1<E extends Comparable<E>> {
         if (e.equals(node.e)) {
             return;
         } else if (node.e.compareTo(e) < 0) {
-            if (node.left == null) {
-                node.left = new Node(e);
+            if (node.right == null) {
+                node.right = new Node(e);
                 size++;
                 return;
             } else {
-                add(node.left, e);
+                add(node.right, e);
             }
         } else {
-            if (node.right == null) {
-                node.right = new Node(e);
+            if (node.left == null) {
+                node.left = new Node(e);
                 size++;
                 return;
             } else {

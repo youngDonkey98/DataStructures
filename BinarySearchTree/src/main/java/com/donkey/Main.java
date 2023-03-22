@@ -1,5 +1,7 @@
 package com.donkey;
 
+import com.donkey.utils.BST;
+
 /***
  * 二叉树
  *  二叉树具有唯一根节点
@@ -27,15 +29,12 @@ package com.donkey;
 public class Main {
 
     public static void main(String[] args) {
-        Integer i1 = 1;
-        Integer i2 = 0;
-        Integer i3 = 2;
-        Integer i4 = -1;
-
-        Integer max = getMin(i1, i2, i3, i4);
-        System.out.println("max = " + max);
-
-        System.out.println("i1.compareTo(i2) = " + i1.compareTo(i2));
+        BST<Integer> bst = new BST<>();
+        int[] nums = {5,3,4,6,8,2};
+        for (int num : nums) {
+            bst.add(num);
+        }
+        bst.preOrder();
     }
 
     public static <E extends Comparable> E getMax(E e1,E e2) {
