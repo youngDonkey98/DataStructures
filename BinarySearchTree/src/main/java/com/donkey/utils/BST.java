@@ -57,12 +57,12 @@ public class BST<E extends Comparable<E>> {
 
         if (e.equals(node.e)) {
             return;
-        } else if (node.e.compareTo(e) < 0 && node.left == null) {
-            node.left = new Node(e);
+        } else if (node.e.compareTo(e) < 0 && node.right == null) {
+            node.right = new Node(e);
             size ++;
             return;
-        } else if (node.e.compareTo(e) > 0 && node.right == null){
-            node.right = new Node(e);
+        } else if (node.e.compareTo(e) > 0 && node.left == null){
+            node.left = new Node(e);
             size ++;
             return;
         }
@@ -73,5 +73,20 @@ public class BST<E extends Comparable<E>> {
         } else {
             add(node.right,e);
         }
+    }
+
+    // 遍历操作  二叉树的前序遍历
+    public void preOrder() {
+        preOrder(root);
+    }
+
+    // 前序遍历 以node为根的二分搜索树 递归算法
+    private void preOrder(Node root) {
+        if (root == null) {
+            return;
+        }
+        System.out.println(root.e);
+        preOrder(root.left);
+        preOrder(root.right);
     }
 }
