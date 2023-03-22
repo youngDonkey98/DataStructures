@@ -107,6 +107,10 @@ public class BST<E extends Comparable<E>> {
     }
 
     // 后序遍历 以node为根的二分搜索树 递归算法
+    public void postOrder() {
+        postOrder(root);
+    }
+
     private void postOrder(Node root) {
         if (root == null) {
             return;

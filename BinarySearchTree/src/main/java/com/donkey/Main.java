@@ -28,13 +28,29 @@ import com.donkey.utils.BST;
  */
 public class Main {
 
+    //////////////////
+    //      5       //
+    //     /  \     //
+    //   3     7    //
+    //  / \   / \   //
+    // 2   4 6   8  //
+    //////////////////
     public static void main(String[] args) {
         BST<Integer> bst = new BST<>();
-        int[] nums = {5,3,4,6,8,2};
+        int[] nums = {5,3,4,7,6,8,2};
         for (int num : nums) {
             bst.add(num);
         }
         bst.preOrder();
+
+        // 中序排序 由小到大
+        System.out.println();
+        bst.inOrder();
+
+        // 后续排序 由下到上
+        //          一个节点 左右子树 根节点
+        System.out.println();   // 2 4 3 6 8 7 5
+        bst.postOrder();
     }
 
     public static <E extends Comparable> E getMax(E e1,E e2) {
