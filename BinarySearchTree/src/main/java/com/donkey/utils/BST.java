@@ -85,8 +85,35 @@ public class BST<E extends Comparable<E>> {
         if (root == null) {
             return;
         }
-        System.out.println(root.e);
+        System.out.println(root.e); // 节点访问在前面
         preOrder(root.left);
         preOrder(root.right);
+    }
+
+    // 中序遍历
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    // 中序遍历 以node为根的二分搜索树 递归算法
+    private void inOrder(Node root) {
+        if (root == null) {
+            return;
+        }
+
+        inOrder(root.left);
+        System.out.println(root.e); // 节点访问在中间
+        inOrder(root.right);
+    }
+
+    // 后序遍历 以node为根的二分搜索树 递归算法
+    private void postOrder(Node root) {
+        if (root == null) {
+            return;
+        }
+
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.println(root.e); // 节点访问在后面
     }
 }
